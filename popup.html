@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Video Finder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Поиск видео на YouTube</h2>
+    <div class="inputs">
+      <label for="channelUrl">URL канала:</label>
+      <input id="channelUrl" type="text" placeholder="Введите URL канала YouTube" />
+      <label for="startDate">Дата начала:</label>
+      <input id="startDate" type="date" />
+      <div class="checkbox-container">
+        <input id="enableEndDate" type="checkbox" />
+        <label for="enableEndDate">Включить дату окончания</label>
+      </div>      
+      <div id="endDateWrapper" style="display: none;">
+        <label for="endDate">Дата окончания:</label>
+        <input id="endDate" type="date" />
+      </div>      
+      <button id="search">Поиск видео</button>
+    </div>
+    <ul id="results"></ul>
+    <h3>Лог информации:</h3>
+    <div id="log"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Video Finder By Date",
+    "version": "1.1",
+    "description": "Поиск YouTube видео по дате или по промежутку дат (макс. 500 видео за раз, ограничение api)",
+    "permissions": ["storage"],
+    "host_permissions": ["https://www.googleapis.com/youtube/v3/*"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    }
+  }
+  

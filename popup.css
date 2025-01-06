@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box; /* Учитываем padding и border */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Окно должно быть расположено сверху */
+    height: 100%; /* Всё окно */
+    overflow: hidden; /* Отключаем прокрутку всего окна */
+  }
+  
+  .container {
+    background-color: #1e1e1e; /* Темный фон для контейнера */
+    border-radius: 12px;
+    padding: 20px;
+    width: 600px; /* Ширина окна */
+    height: 95%; /* Окно будет занимать почти всю доступную высоту */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2, h3 {
+    color: #ffffff; /* Белые заголовки */
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  label {
+    color: #e0e0e0;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input, button {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 12px;
+    background-color: #333333; /* Темный фон для полей */
+    border: 1px solid #444444; /* Светлый бордер */
+    color: #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  input:focus, button:focus {
+    outline: none;
+    border-color: #5680E9; /* Синий цвет для фокуса */
+  }
+  
+  button {
+    background-color: #5680E9; /* Синий фон для кнопки */
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #4060c2; /* Темно-синий при наведении */
+  }
+  
+  /* Блок с результатами */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+    flex-grow: 1;
+    overflow-y: auto; /* Прокрутка, если содержимое выходит за пределы */
+    max-height: 300px; /* Ограничиваем высоту для списка */
+  }
+  
+  li {
+    background-color: #2a2a2a; /* Темный фон для элементов списка */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #e0e0e0;
+  }
+  
+  /* Лог */
+  #log {
+    background-color: #222222;
+    border: 1px solid #444444;
+    padding: 10px;
+    margin-top: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
+    color: #e0e0e0;
+    max-height: 200px; /* Ограничиваем высоту лога */
+  }
+  
+  /* Поля ввода */
+  .inputs {
+    flex: 0 1 auto; /* Для полей ввода */
+  }
+  
+  /* Стили для ссылок */
+  a {
+    color: #56A0D3; /* Яркий синий для ссылок */
+    text-decoration: none;
+    font-size: 16px; /* Увеличиваем размер шрифта */
+  }
+  
+  a:hover {
+    color: #A3C6E8; /* Светлый синий при наведении */
+  }
+  
+  /* Блоки с датой и временем */
+  .date-time {
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+  }
+  
+  #results li {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .video-container {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;  /* Убираем подчеркивание */
+  }
+  
+  .video-thumbnail {
+    width: 120px;
+    height: 90px;
+    margin-right: 10px;
+  }
+  
+  .video-text {
+    flex-grow: 1; /* Текст будет занимать оставшееся пространство */
+  }
+  
+  .video-title {
+    font-weight: bold;
+    word-wrap: break-word; /* Перенос слов на следующую строку */
+  }
+  
+  .video-date {
+    font-size: 0.9em;
+    color: #afafaf;
+    margin-top: 5px; /* Расстояние между названием и датой */
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center; /* Выравнивание элементов по вертикали */
+    margin-bottom: 10px;
+    gap: 8px; /* Заменяет margin-right для более естественного отступа */
+  }
+  
+  .checkbox-container input {
+    width: auto; /* Убираем растягивание чекбокса */
+    height: auto; /* Гарантируем стандартный размер чекбокса */
+  }
+  
+  .checkbox-container label {
+    margin: 0; /* Убираем лишние отступы у текста */
+  }
+
+  input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+}
+  
